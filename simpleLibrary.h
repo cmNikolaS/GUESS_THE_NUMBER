@@ -12,7 +12,7 @@ namespace simpleLibrary
 inline void clearScreen() { system("cls"); }
 inline void pause() { std::cin.get(); }
 
-void printFile(const std::string fileName)
+inline void printFile(const std::string fileName)
 {
     std::ifstream file(fileName);
     assert(file.is_open() && "CANNOT OPEN FILE ");
@@ -24,12 +24,12 @@ void printFile(const std::string fileName)
     file.close();
 }
 
-void setTitle(std::string title)
+inline void setTitle(std::string title)
 {
     SetConsoleTitleA(title.c_str());
 }
 
-void setWindowSize(int WIDTH, int HEIGHT)
+inline void setWindowSize(int WIDTH, int HEIGHT)
 {
     HWND console = GetConsoleWindow();
     RECT r;
